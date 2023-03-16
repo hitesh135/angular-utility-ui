@@ -1,0 +1,12 @@
+<c-container>
+    <c-row>
+        <c-col>
+            <div class="p-3">
+                <button cButton color="primary" class="m-3" (click)="format()">Format</button>
+                <button cButton color="secondary" (click)="copyToClipboard(data)">Copy</button>
+            </div>
+        </c-col>
+    </c-row>
+</c-container>
+
+<json-editor [options]="editorOptions" [(ngModel)]="data" (change)="getData($event)"></json-editor>
